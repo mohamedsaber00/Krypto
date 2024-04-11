@@ -19,7 +19,7 @@ struct AssetItem: View {
                 Text("\(asset.rank)")   .font(.system(size: 14))
                     .fontWeight(.semibold)
                     .foregroundColor(.gray)
-                    .frame(width: 30, alignment: .trailing)
+                    .frame(width: 30, alignment: .leading)
 
                 
                 
@@ -56,8 +56,21 @@ struct AssetItem: View {
                 
                 Text("Volume: \( Double(asset.volumeUsd24Hr)?.formattedWithAbbreviations() ?? "0,000")").font(.system(size: 12)).foregroundColor(.gray).lineLimit(1)
                 
-            }
+            }   .frame(width: 100,alignment: .trailing)
+                .padding(.horizontal,0)
+            
     
+            VStack{
+                Text((asset.changePercent24Hr.toPercentString()))
+                    .font(.system(size: 11))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+            }
+            .frame(width: 55)
+            .padding(.vertical, 11)
+            .padding(.horizontal,3)
+            .background(asset.changePercent24Hr.toPercentColor())
+            .cornerRadius(4)
             
         }.padding(.horizontal,4)
         

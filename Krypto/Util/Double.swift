@@ -20,14 +20,6 @@ extension Double {
         formatter.currencySymbol = "$"
         return formatter
     }
-    private var percentageFormatter : NumberFormatter {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 2
-        formatter.minimumFractionDigits = 2
-        return formatter
-    }
-    
     func toUSDCurrency() -> String {
         
         let price = abs(Double(self))
@@ -58,10 +50,6 @@ extension Double {
         if priceString.last == "." || priceString.last == "," {priceString =  String(priceString.dropLast())}
         
         return priceString
-    }
-    
-    func toPercentString() -> String {
-        return "\(self >= 0 ? "+":"-" )%"+(percentageFormatter.string(for: self) ?? "0.00").replacingOccurrences(of: "-", with: "")
     }
     
     func asNumberString(digit: Int = 2) -> String{

@@ -16,24 +16,30 @@ struct HomeView: View {
         
         
         VStack{
-    
             
-            ScrollView{
-                
-                TabView{
-                    ForEach(Array(viewmodel.assets.prefix(3))){ asset in
-                        AssetItem(asset: asset)
-                    }
+   
+                List{
+                    Text("Top Gainer").font(.title) .bold()
                     
-                }.frame(height: 200).tabViewStyle(PageTabViewStyle())
-                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-             
-                
-                ForEach(viewmodel.assets){ asset in
-                    AssetItem(asset: asset)
-                }
+                    TabView{
+                        ForEach(Array(viewmodel.assets.prefix(3))){ asset in
+                            AssetHorizontalItem(asset: asset).padding([.leading,.trailing], 12).padding(.top,-20)
+                        }
+                        
+                    }.frame(height: 200,alignment: .top).tabViewStyle(PageTabViewStyle())
+                        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                    
+                    
+                    ForEach(viewmodel.assets){ asset in
+                        AssetItem(asset: asset).swipeActions{
+                            Button("Add to favorite"){
+                                print("Hello World")
+                            }.tint(Color.blue)
+
+                        }
+                    }
+                }.listStyle(InsetListStyle())
             }
-        }
     }
 }
 

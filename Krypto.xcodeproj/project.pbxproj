@@ -28,6 +28,8 @@
 		F1D404F52BC771FD00A9541C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D404F42BC771FD00A9541C /* HomeView.swift */; };
 		F1D404F82BC77AF100A9541C /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D404F72BC77AF100A9541C /* FavoritesView.swift */; };
 		F1D404FA2BC77B2000A9541C /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D404F92BC77B2000A9541C /* FavoritesViewModel.swift */; };
+		F1D404FC2BC78FB900A9541C /* AssetHorizontalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D404FB2BC78FB900A9541C /* AssetHorizontalItem.swift */; };
+		F1D404FE2BC794AB00A9541C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D404FD2BC794AB00A9541C /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		F1D404F42BC771FD00A9541C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F1D404F72BC77AF100A9541C /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		F1D404F92BC77B2000A9541C /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		F1D404FB2BC78FB900A9541C /* AssetHorizontalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetHorizontalItem.swift; sourceTree = "<group>"; };
+		F1D404FD2BC794AB00A9541C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +236,7 @@
 			children = (
 				F1D404E82BC61AFD00A9541C /* PreviewProvider.swift */,
 				F1D404EE2BC6296C00A9541C /* Double.swift */,
+				F1D404FD2BC794AB00A9541C /* String.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			children = (
 				F1D404E62BC6183600A9541C /* AssetItem.swift */,
 				F1D404F02BC63C9300A9541C /* AssetImageView.swift */,
+				F1D404FB2BC78FB900A9541C /* AssetHorizontalItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,6 +447,8 @@
 				F1D404E32BC5583A00A9541C /* AssetsServie.swift in Sources */,
 				F1D404E72BC6183600A9541C /* AssetItem.swift in Sources */,
 				F1D404A82BC50C9600A9541C /* KryptoApp.swift in Sources */,
+				F1D404FC2BC78FB900A9541C /* AssetHorizontalItem.swift in Sources */,
+				F1D404FE2BC794AB00A9541C /* String.swift in Sources */,
 				F1D404EF2BC6296C00A9541C /* Double.swift in Sources */,
 				F1D404E92BC61AFD00A9541C /* PreviewProvider.swift in Sources */,
 			);
