@@ -7,13 +7,7 @@ target 'Krypto' do
 
   # Pods for Krypto
 
-  target 'KryptoTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+pod 'Alamofire', '~> 5.9.1'
 
-  target 'KryptoUITests' do
-    # Pods for testing
-  end
 
 end

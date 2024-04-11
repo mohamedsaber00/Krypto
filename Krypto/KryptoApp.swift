@@ -10,6 +10,9 @@ import SwiftData
 
 @main
 struct KryptoApp: App {
+    
+    
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,

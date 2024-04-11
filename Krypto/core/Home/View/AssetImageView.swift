@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct AssetImageView: View {
+    
+    let symbol: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        AsyncImage(url: URL(string: "https://assets.coincap.io/assets/icons/\(symbol)@2x.png")){ image in
+            image.image?.resizable()
+        }
     }
 }
 
 #Preview {
-    AssetImageView()
+    AssetImageView(symbol: "btc")
 }

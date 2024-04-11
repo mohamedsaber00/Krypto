@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Environment(\.modelContext) private var modelContext
+    
+    @StateObject private var viewmodel = HomeViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        
+        VStack{
+    
+            
+            ScrollView{
+                
+                TabView{
+                    ForEach(Array(viewmodel.assets.prefix(3))){ asset in
+                        AssetItem(asset: asset)
+                    }
+                    
+                }.frame(height: 200).tabViewStyle(PageTabViewStyle())
+                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+             
+                
+                ForEach(viewmodel.assets){ asset in
+                    AssetItem(asset: asset)
+                }
+            }
+        }
     }
 }
 
 #Preview {
     HomeView()
+        .modelContainer(for: Item.self, inMemory: true)
 }

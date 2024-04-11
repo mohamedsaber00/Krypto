@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct AssetsList : Codable{
+    let data: [Asset]
+}
