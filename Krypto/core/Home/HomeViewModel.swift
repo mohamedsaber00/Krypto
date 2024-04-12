@@ -27,8 +27,7 @@ class HomeViewModel : ObservableObject{
             guard let self = self else { return }
             switch completion {
             case .failure(let error):
-            
-                    print("Error")
+                print("Error: \(error)")
         
             case .finished:
                 break

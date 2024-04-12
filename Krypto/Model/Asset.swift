@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftData
 
 struct Asset: Codable, Identifiable {
     let id: String

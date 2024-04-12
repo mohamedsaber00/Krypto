@@ -16,11 +16,10 @@ struct HomeView: View {
         
         
         VStack{
-            
-   
+        
                 List{
                     Text("Top Gainer").font(.title) .bold()
-                    
+                
                     TabView{
                         ForEach(Array(viewmodel.assets.prefix(3))){ asset in
                             AssetHorizontalItem(asset: asset).padding([.leading,.trailing], 12).padding(.top,-20)
@@ -33,13 +32,21 @@ struct HomeView: View {
                     ForEach(viewmodel.assets){ asset in
                         AssetItem(asset: asset).swipeActions{
                             Button("Add to favorite"){
-                                print("Hello World")
+                              addToFavorite(asset: asset)
                             }.tint(Color.blue)
 
                         }
                     }
                 }.listStyle(InsetListStyle())
             }
+    }
+    
+    
+    func addToFavorite(asset: Asset){
+    let favorite = FavoriteAsset(
+        id: asset.id, rank: asset.rank, symbol: asset.symbol, name: asset.name, supply: asset.supply, maxSupply: asset.maxSupply, marketCapUsd: asset.marketCapUsd, volumeUsd24Hr: asset.volumeUsd24Hr, priceUsd: asset.priceUsd, changePercent24Hr: asset.changePercent24Hr, vwap24Hr: asset.vwap24Hr
+    )
+        modelContext.insert(favorite)
     }
 }
 

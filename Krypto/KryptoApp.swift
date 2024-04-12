@@ -10,12 +10,9 @@ import SwiftData
 
 @main
 struct KryptoApp: App {
-    
-    
-    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            FavoriteAsset.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
